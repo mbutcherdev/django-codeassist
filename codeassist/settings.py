@@ -53,6 +53,7 @@ AUTH_USER_MODEL = "base.User"  # Use the custom user model
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'CsrfViewMiddleware.CsrfViewMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -145,4 +146,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 # CSRF
 CSRF_COOKIE_SECURE = True
-CSRF_TRUSTED_ORIGINS = ['https://codeassist.mbutcher.dev/']
+CSRF_TRUSTED_ORIGINS = ['https://*.mbutcher.dev/']
