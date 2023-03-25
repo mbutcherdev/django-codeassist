@@ -53,7 +53,6 @@ AUTH_USER_MODEL = "base.User"  # Use the custom user model
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'CsrfViewMiddleware.CsrfViewMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
