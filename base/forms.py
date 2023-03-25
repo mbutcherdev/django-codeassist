@@ -12,8 +12,6 @@ class createUserForm(UserCreationForm):
         # Fields should be name, username, email, password1, password2
         fields = ["name", "username", "email", "password1", "password2"]
 
-        # I'll add Captcha later on 
-        # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
 
         
 
