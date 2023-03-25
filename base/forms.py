@@ -1,0 +1,31 @@
+from django.forms import ModelForm
+from .models import Room, User
+from django.contrib.auth.forms import UserCreationForm
+
+
+
+
+
+class createUserForm(UserCreationForm):
+    class Meta:
+        model = User       
+        # Fields should be name, username, email, password1, password2
+        fields = ["name", "username", "email", "password1", "password2"]
+
+        # I'll add Captcha later on 
+        # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
+
+        
+
+
+class RoomForm(ModelForm):
+    class Meta:
+        model = Room
+        fields = "__all__"
+        exclude = ["host", "participants", "created_at", "updated_at"]
+
+
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ["avatar", "name", "username", "email", "bio"]
