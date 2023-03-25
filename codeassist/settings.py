@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['codeassist.mbutcher.dev']
                   
 
 # Application definition
@@ -145,8 +145,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 # CSRF
 CSRF_COOKIE_SECURE = True
-
-
-
-
-
+CSRF_TRUSTED_ORIGINS = ['https://codeassist.mbutcher.dev/']
